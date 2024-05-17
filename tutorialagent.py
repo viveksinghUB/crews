@@ -1,6 +1,6 @@
 import os
-os.environ["SERPER_API_KEY"] = ""  # serper.dev API key
-os.environ["OPENAI_API_KEY"] = ""
+os.environ["SERPER_API_KEY"] = "t1"  # serper.dev API key
+os.environ["OPENAI_API_KEY"] = "t2"
 
 
 
@@ -11,7 +11,7 @@ from crewai import Crew, Process
 
 search_tool = SerperDevTool()
 
-# Creating a senior researcher agent with memory and verbose mode
+# Creating a senior researcher agent with memory and verbosepip install 'crewai[tools]' mode
 researcher = Agent(
   role='User finding details about companies',
   goal='Find details about {topic}',
